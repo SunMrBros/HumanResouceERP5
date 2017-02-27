@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="Salary" extends="struts-default" namespace="/">
+		<action name="salcheck" class="com.hebut.erp.action.SalaryAction">
+			<result>salary.jsp</result>
+			<result name="error">error.jsp</result>
+			<result name="input">error.jsp</result>
+		</action>
+		<!-- 员工根据日期查询 -->
+		<action name="salwithdate" class="com.hebut.erp.action.SalaryAction"
+			method="salwithDate">
+			<result>salary.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+		<!-- 提交工资修改情况 -->
+		<action name="setting" class="com.hebut.erp.action.SettingAction">
+			<result>succ.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+		<!-- 初始化工资设置页的工资情况 -->
+		<action name="salinit" class="com.hebut.erp.action.SettingAction"
+			method="initSal">
+			<result>salaryset.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+		<action name="makechange" class="com.hebut.erp.action.UpSetAction">
+			<result>succ.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+		<!-- 员工查询的工资情况 -->
+		<action name="salaryinfo" class="com.hebut.erp.action.SalInfoAction">
+			<result>salaryinfo.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+		<action name="modsal" class="com.hebut.erp.action.SalInfoAction" method="modSal">
+			<result>modifysal.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+		<action name="upmodsal" class="com.hebut.erp.action.SalInfoAction" method="upmodSal">
+			<result >succ.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+		<!-- 初始化工资等级生成下拉列表json数据 -->
+		<action name="initsal" class="com.hebut.erp.action.SalaryInit">
+			<result name="success" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">result</param>
+			</result>
+			<result name="error">error.jsp</result>
+		</action>
+		<!-- 初始化工资情况,等待管理员核实然后发放工资-->
+		<action name="initsalinfo" class="com.hebut.erp.action.SalaryInit" method="salCheckInit">
+			<result>infocheck.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+		<action name="fagongzi" class="com.hebut.erp.action.SalaryAction" method="faGongzi">
+			<result>succ.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+	</package>
+</struts>

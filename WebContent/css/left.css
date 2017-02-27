@@ -1,0 +1,27 @@
+@charset "utf-8";
+.lef ul li {
+	height: 33px;
+	background-image: url(images/erp_03.gif);
+	background-repeat: repeat-x;
+	list-style-type: none;
+	color: #fff;
+	text-align: center;
+	width: 250px;
+}
+.lef {
+	width: 400px;
+}
+.lef ul li a {
+	color: #333;
+	font-weight: bold;
+	line-height: 1.7em;
+	text-decoration: none;
+}
+.lef ul li a:hover {
+	color: #093;
+}
+.lef ul {
+	width: 250px;
+	height: auto;
+	padding-top: 40px;
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+	<package name="Job" extends="struts-default" namespace="/">
+		<action name="addjobinit" class="com.hebut.erp.action.DeptAction">
+			<result>addjob.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+		<action name="addjob" class="com.hebut.erp.action.JobAction"
+			method="addJob">
+			<result>succ.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+		<action name="deljob" class="com.hebut.erp.action.DeptAction"
+			method="showDept">
+			<result>deljob.jsp</result>
+		</action>
+
+		<action name="deljobact" class="com.hebut.erp.action.JobAction"
+			method="delJob">
+			<result>succ.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+		<action name="ajax_listJob" class="com.hebut.erp.action.JobAction"
+			method="showJob">
+			<result type="chain">deljob</result>
+			<result name="error">error.jsp</result>
+		</action>
+	</package>
+</struts>

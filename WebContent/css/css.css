@@ -1,0 +1,133 @@
+@charset "utf-8";
+
+a{
+	text-decoration: none;
+	font-size: 14px;
+	color: #F0F;
+	}
+	a:hover{
+		color:#0C0;}
+.whole {
+	margin-top: 20px;
+	margin-left: 40px;
+	width: auto;
+	height: auto;
+	overflow: hidden;
+	border: solid 1px #CCC;
+	padding-top: 20px;
+	padding-right: 20px;
+	padding-bottom: 50px;
+	padding-left: 40px;
+	
+	
+}
+.whole tr{
+	text-align:center;
+	}
+.whole .tab_sty {
+	text-align: center;
+}
+.whole .tab_sty .tr_first {
+	background-color: #a5e8f8;
+}
+
+.whole #table2 td {
+	border-bottom-width: 1px;
+	border-top-style: none;
+	border-bottom-style: solid;
+	border-bottom-color: #66;
+}
+td {
+	text-align: center;
+}
+
+#fist {
+	background-color: #a4e7f8;
+}
+
+.whole div #table2 caption span {
+	font-size: 24px;
+}
+
+.whole div table form tr td #in {
+	height: 22px;
+}
+
+.whole #more {
+	height: 60px;
+	background-color: #FFF;
+	width: 930px;
+	display: none;
+	padding-left: 80px;
+	padding-top: 30px;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #000;
+}
+.whole {
+	padding-left: 30px;
+	width: auto;
+}
+
+.whole #more table form tr td #select {
+	width: 100px;
+	height: 22px;
+}
+.page {
+	text-align: right;
+	width: 1000px;
+	margin-top: 10px;
+}
+.odd{
+	background-color:#ccc;
+}
+.even{
+background-color:#eff;
+}
+.whole table form tr td {
+	text-align: right;
+}
+
+.whole table form tr td .inp {
+	height: 25px;
+	width: 200px;
+}
+
+.whole table #form1 tr td #button {
+	width: 60px;
+}.whole table tr td img {
+	margin: 0px;
+	padding:0px;
+}
+
+#fi {
+	width: 160px;
+	height: 22px;
+}
+
+#jiguan {
+	width: 400px;
+	height: 25px;
+	text-align: left;
+}
+
+#textarea {
+
+}
+.whole form table tr td #addr {
+	width: 550px;
+}
+#whole form #table2 tr td input {
+	height: 25px;
+}
+.whole table tr {
+
+}
+.back #top .who span {
+	color: #F00;
+	font-size: 16px;
+}
+.whole div #table2 caption {
+	height: 40px;
+}
+

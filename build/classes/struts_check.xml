@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="kaoqin" extends="struts-default" namespace="/">
+		<action name="daycheckinit" class="com.hebut.erp.action.InitCheckAction">
+			<result>daycheck.jsp</result>
+			<result name="error">error.jsp</result>
+			<result name="input">error.jsp</result>
+		</action>
+		<action name="check" class="com.hebut.erp.action.DayCheckAction">
+			<result>succ.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+		<action name="todaycheck" class="com.hebut.erp.action.DayCheckAction" method="todayCheck">
+			<result>todaycheck.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+		<action name="setTime" class="com.hebut.erp.action.DayCheckAction" method="setTime">
+			<result>succ.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+		<action name="tongji" class="com.hebut.erp.action.DayCheckTongJiAction">
+			<result>tongji.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+	</package>
+</struts>

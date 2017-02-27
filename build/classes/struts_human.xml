@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+	<package name="Human" extends="struts-default" namespace="/">
+		<!--登录模块 -->
+		<action name="login" class="com.hebut.erp.action.LoginAction">
+			<result name="success">admin/index.html</result>
+			<result name="error">admin/error.jsp</result>
+			<result name="input">login.jsp</result>
+			<result name="normal">employee/eindex.jsp</result>
+		</action>
+		<!-- 员工详细信息想查看 -->
+		<action name="huminfo" class="com.hebut.erp.action.HumanAction">
+			<result>empdetail.jsp</result>
+			<result name="error">error.jsp</result>
+
+		</action>
+		<!-- 初始化 注册页面 -->
+		<action name="initdept" class="com.hebut.erp.action.InitDeptAction">
+			<result name="success" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">result</param>
+			</result>
+		</action>
+	<!-- 根据部门信息初始化岗位信息,返回字符流 -->
+		<action name="initjob" class="com.hebut.erp.action.InitJobAction">
+			<result name="success" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">result</param>
+			</result>
+			<result name="input" type="dispatcher">
+				error.jsp
+			</result>
+			
+		</action>
+		<!--员工注册 -->
+
+		<action name="regist" class="com.hebut.erp.action.RegistAction">
+			<result>succ.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+
+		
+		<!-- 列出所员工信息 -->
+		<action name="listAction" class="com.hebut.erp.action.ListAction">
+			<result name="success">empinfo.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+		<!--根据id查询员工信息 -->
+		<action name="queryById" class="com.hebut.erp.action.QueryAction"
+			method="queryById">
+			<result name="success">empinfo.jsp</result>
+			<result name="error">error.jsp</result>
+			<result name="input">error.jsp</result>
+		</action>
+		<!--根据名字查询员工信息 -->
+		<action name="queryByName" class="com.hebut.erp.action.QueryAction"
+			method="queryByName">
+			<result>empinfo.jsp</result>
+			<result name="error">error.jsp</result>
+			<result name="input">error.jsp</result>
+		</action>
+		<!--根据岗位编号查询员工信息 -->
+		<action name="queryByJobId" class="com.hebut.erp.action.QueryAction"
+			method="queryByJobId">
+			<result>empinfo.jsp</result>
+			<result name="error">error.jsp</result>
+			<result name="input">error.jsp</result>
+		</action>
+		<!--上一页 操作 -->
+		<action name="pageUp" class="com.hebut.erp.action.PageAction"
+			method="pageUp">
+			<result>empinfo.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+		<!--下一页操作 -->
+		<action name="pageDown" class="com.hebut.erp.action.PageAction"
+			method="pageDown">
+			<result>empinfo.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+		<!--员工工资信息 -->
+		<action name="listSalary" class="com.hebut.erp.action.PageAction"
+			method="pageDown">
+			<result>empinfo.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+		<!--初始化要修改员工信息操作 -->
+		<action name="modify" class="com.hebut.erp.action.ModInitAction">
+			<result>modify.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+		<!-- 更新修改到数据库 -->
+		<action name="update" class="com.hebut.erp.action.ModifyAction">
+			<result>succ.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+		<!--删除员工操作 -->
+		<action name="delete" class="com.hebut.erp.action.HumanAction"
+			method="delHum">
+			<result>succ.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+		</package>
+</struts>

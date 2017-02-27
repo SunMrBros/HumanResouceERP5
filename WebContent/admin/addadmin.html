@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>增加操作员</title>
+<link href="../css/css.css" rel="stylesheet" type="text/css">
+<script src="../js/reg.js"></script>
+
+<script src="../js/funs.js"></script>
+</head>
+
+<body>
+	<div class="whole">
+	<center><h2>增加管理员</h2></center>
+		<form method="post" action="addMgr">
+			<table width="431" align="center">
+				<tr>
+					<td width="154" height="41">管理员姓名:</td>
+					<td width="265"><input type="text" name="admin.name" onBlur="chkname()" id="name"></td>
+				</tr>
+				<tr>
+					<td height="56">密码:</td>
+					<td><input type="password" name="admin.password" id="pass1"></td>
+				</tr>
+				<tr>
+					<td height="62">确认密码:</td>
+					<td><input type="password" id="pass2"></td>
+				</tr>
+				<tr>
+				  <td height="56" align="right">邮箱</td>
+				  <td height="56" align="right"><input type="text" id="email" name="admin.email" onBlur="chkemail()"></td>
+		      </tr>
+				<tr>
+					<td height="56" colspan="2" align="right"><input type="button" value="增加管理员" onClick="addMgr()"></td>
+				</tr>
+			</table>
+		</form>
+
+	</div>
+</body>
+</html>

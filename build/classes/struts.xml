@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<constant name="struts.devMode" value="true" />
+
+	<package name="system" extends="struts-default">
+		<!--修改密码 -->
+		<action name="passchange" class="com.hebut.erp.action.PassChagAction">
+			<result>succ.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+		<!--增加管理员-->
+		<action name="addMgr" class="com.hebut.erp.action.PassChagAction" method="addMgr">
+			<result>succ.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+		<!--退出操作 -->
+		<action name="logoutAction" class="com.hebut.erp.action.LogoutAction">
+			<result>index.html</result>
+			<result name="error">change_succ.jsp</result>
+		</action>
+	</package>
+	<package name="Yanzhengma" extends="struts-default" namespace="/">
+		<action name="createImageAction" class="com.hebut.erp.action.CreateImageAction">
+			<result name="success" type="stream">
+				<param name="contentType">image/jpeg</param>
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
+	</package>
+
+	<include file="struts_job.xml" />
+	<include file="struts_human.xml" />
+	<include file="struts_dept.xml" />
+	<include file="struts_salary.xml" />
+	<include file="struts_check.xml"/>
+</struts>

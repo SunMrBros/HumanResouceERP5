@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>工资管理</title>
+<link ref="stylesheet" type="text/css" href="../css/css.css"/>
+<style type="text/css">
+.whole .menu {
+	height: auto;
+	width: auto;
+}
+.whole .menu .opt {
+	text-align: right;
+	height: auto;
+	width: auto;
+}
+</style>
+</head>
+
+<body>
+<div class="whole">
+<div class="menu">
+	 <h3>员工工资一览表</h3>
+     <div class="opt">
+     	<select id="month" >
+        	<option value="1">2015年5月25日</option>
+        </select>
+        <button>生成Excle表格</button>
+     </div>
+</div>
+<table width="639" border="1" align="center">
+ 
+  <tr style="text-align:center; background-color:#CCC">
+    <td width="86" height="47">员工编号</td>
+    <td width="49">姓名</td>
+    <td width="96">所在部门</td>
+    <td width="80">应发工资</td>
+    <td width="76">奖励/扣除</td>
+    <td width="103">实发工资</td>
+     <td width="103">发放时间</td>
+  </tr>
+  <tr align="center">
+    <td height="47">1</td>
+    <td>张三</td>
+    <td>销售部</td>
+    <td>5000</td>
+    <td>-500</td>
+    <td>4500</td>
+    <td>2015-5-25</td>
+  </tr>
+</table>
+</div>
+</body>
+</html>
